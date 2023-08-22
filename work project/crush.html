@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: darkgrey;
+        }
+        </style>
+</head>
+<body>
+    <button id="crush" onclick="f_crush()">crush alg </button>
+    <br>
+    <button id="nameOnly" onclick="f_nameOnly()">crush kyc alg name only</button>
+    <br>
+    <button id="nameSsn" onclick="f_nameSsn()">crush kyc alg name and ssn</button>
+
+<script>
+
+        let remCrush = document.getElementById("crush");
+        let remNameOnly = document.getElementById("nameOnly");
+        let remNameSsn = document.getElementById("nameSsn");
+
+        function f_crush(){
+            remNameOnly.remove();
+            remNameSsn.remove();
+            navigator.clipboard.writeText("crush alg");
+            remCrush.innerHTML += " &#10003";
+
+        }
+
+        function f_nameOnly(){
+            remCrush.remove();
+            remNameSsn.remove();
+            navigator.clipboard.writeText("crush kyc alg - name only");
+            remNameOnly.innerHTML += " &#10003";
+        }
+        
+        function f_nameSsn(){
+            remCrush.remove();
+            remNameOnly.remove();
+            navigator.clipboard.writeText("crush kyc alg - name and ssn");
+            remNameSsn.innerHTML += " &#10003";
+        }
+
+      
+
+    
+
+</script>
+
+</body>
+</html>
