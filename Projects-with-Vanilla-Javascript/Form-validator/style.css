@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+/* use variables */
+:root {
+  --success-color: #0c8631;
+  --error-color: #e44f0a; 
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(241, 245, 250);
+  color: sienna;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  
+}
+
+.container {
+  background-color:  rgb(93, 142, 203);
+  width: 360px;
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(18, 54, 97, .5);
+  
+}
+
+  .form {
+    padding: 10px 20px 20px;
+  }
+  .form h2 {
+    text-align: center;
+    margin: 20px 0 20px;
+  }
+  .form-control {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+  }
+  .form-control label {
+    color: #777;
+    display: block;
+    margin-bottom: 5px;
+  }
+  .form-control input {
+    border: 2.5px solid #f0f0f0;
+    border-radius: 2px;
+    display: block ;
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+  }
+  .form-control input:focus {
+    outline: 0
+    border-color #f0e9e9;  /* <--- you may remove this so no outline */
+  }
+  .form-control small{
+    color: var(--error-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+  }
+    /* make the error message visible when JS is applied in the code */
+    .form-control.error small {
+      visibility: visible;
+    }
+
+  /* apply color if there is an error or if successful */
+  .form-control.success input {
+    border-color: var(--success-color);
+    
+  }
+  .form-control.error input {
+    border-color: var(--error-color);
+  }
+
+  .form button {
+    cursor: pointer;
+    background-color: rgb(142, 216, 142);
+    border: 2px solid rgb(142, 216, 142);
+    border-radius: 4px;
+    color: rgb(5, 87, 30);
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    margin-top: 20px;
+    width: 100%;
+  }
