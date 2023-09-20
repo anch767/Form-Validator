@@ -3,7 +3,7 @@
 /* use variables */
 :root {
   --success-color: #0c8631;
-  --error-color: #e44f0a; 
+  --error-color: rgb(223, 77, 19); 
 }
 
 * {
@@ -12,7 +12,7 @@
 
 body {
   background-color: rgb(241, 245, 250);
-  color: sienna;
+  color: rgb(22, 112, 26);
   display: flex;
   justify-content: center;
   align-items: center;

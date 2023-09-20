@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
@@ -13,27 +13,28 @@
         <h2>Register With Us</h2>
         <div class="form-control">
           <label for="username">Username</label>
-          <input type="text" name="" id="username" placeholder="Enter username">
-          <small>Error message</small>
+          <input type="text" id="username" placeholder="Enter username">
+          <small id="username-error">Error message</small>
         </div>
         <div class="form-control">
-          <label for="Email">Email</label>
-          <input type="email" name="" id="email" placeholder="Enter email">
-          <small>Error message</small>
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter email">
+          <small id="email-error">Error message</small>
         </div>
         <div class="form-control">
-          <label for="Password">Password</label>
-          <input type="password" name="" id="password" placeholder="Enter password">
-          <small>Error message</small>
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter password">
+          <small id="password-error">Error message</small>
         </div>
         <div class="form-control">
-          <label for="Confirm Password">Confirm Password</label>
-          <input type="password" name="" id="confirm-password" placeholder="Enter password again">
-          <small>Error message</small>
+          <label for="confirm password">Confirm Password</label>
+          <input type="password" id="confirm-password" placeholder="Enter password again">
+          <small id="confirm-password-error">Error message</small>
         </div>
-        <button>Submit</button>
+        <button id="submit">Submit</button>
       </form>
     </div>
+    
     <script src="script.js"></script>
   </body>
 </html>
