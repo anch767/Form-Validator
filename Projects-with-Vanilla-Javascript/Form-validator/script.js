@@ -23,20 +23,11 @@ const showSuccess = (input) => {
 
 function checkEmail(input) {
   const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  
-  if (re.test(input.value.trim())){
-    showSuccess(input);
-    console.log(input.value, 'Email is valid');
-  } else {
-    showError(input, 'Email not valid');
-    console.log(input.value, 'Email is not valid');
-  }
+  (re.test(input.value.trim())) ? showSuccess(input) : showError(input, 'Email not valid');
 }
 
 // get the input ID and use it to display error
-function getInputId(str){
-  return str.id.charAt(0).toUpperCase() + str.id.slice(1);   // <--- capitalize | uppercase first letter in a string
-}
+const getInputId = (str) => str.id.charAt(0).toUpperCase() + str.id.slice(1);   // <--- capitalize | uppercase first letter in a string
 
 function checklength(input, min, max) {
   if (input.value.length < min || input.value.length > max ){
@@ -49,11 +40,7 @@ function checklength(input, min, max) {
 
 // check if password match
 function checkPasswordMatch(input1, input2) {
-  if (input1.value !== input2.value){
-    showError(input2, `${getInputId(input2)} does not match`)
-  } else {
-    showSuccess(input2)
-  }
+  (input1.value !== input2.value) ? showError(input2, `${getInputId(input2)} does not match`) : showSuccess(input2);
 }
 
 
@@ -74,15 +61,12 @@ const checkRequired = function(inputArray) {
 
 submit.addEventListener('click', function(e) {
   e.preventDefault();
-  console.log('clicked submit');
 
   checkRequired([username, email,  password, confirmPassword])
   checkEmail(email); 
   checklength(username, 6, 20)
   checklength(password, 8, 60)
   checkPasswordMatch(password, confirmPassword)
-
-  
 });
 
 

@@ -58,7 +58,7 @@ body {
   }
   .form-control input:focus {
     outline: 0
-    border-color #f0e9e9;  /* <--- you may remove this so no outline */
+    border-color #f0e9e9;  /* <--- you may remove this so no outline will be displayed*/
   }
   .form-control small{
     color: var(--error-color);
