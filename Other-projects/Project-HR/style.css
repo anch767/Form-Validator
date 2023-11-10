@@ -1,0 +1,63 @@
+
+* {
+  background-color: rgb(36, 61, 61);
+  color: beige;
+}
+
+.phone-result {
+  background-color: rgb(42, 126, 136);
+  width: 250px;
+  height: 25px;
+  position: relative;
+  border-radius: 15px;
+  margin: 5px;
+}
+
+.phone-tnp {
+  background-color: rgb(73, 59, 41);
+  width: 80px;
+  height: 19px;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  border-radius: 10px;
+  color: azure;
+  text-align: center;
+  font-size: 14px;
+  font-family: Calibri, 'Trebuchet MS', sans-serif ;
+}
+
+.phone-num {
+  background-color: rgb(96, 96, 116);
+  width: 120px;
+  height: 19px;
+  position: absolute;
+  top: 3px;
+  left: 86px;
+  border-radius: 10px;
+  color: rgb(207, 230, 206);
+  font-size: 14px;
+  text-align: center;
+  font-family: Calibri, 'Trebuchet MS', sans-serif;
+  line-height: 5px;
+}
+
+.copy {
+  width: 40px;
+  height: 19px;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  border-radius: 10px;
+  line-height: 5px;
+  font-family: Calibri, 'Trebuchet MS', sans-serif;
+  color: rgb(32, 39, 72);
+}
+
+.phone-result {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
