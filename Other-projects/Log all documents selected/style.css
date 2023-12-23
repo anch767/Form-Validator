@@ -1,0 +1,49 @@
+.main-div {
+  background-color: cornflowerblue;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.textarea-div{
+  display:flex;
+  flex-direction: column;
+  width: 200px;
+}
+
+.buttons {
+  background-color: rgb(66, 130, 83);
+  margin: 5px 5px 10px;
+  width: 100px;
+  height: 190px;
+  display: flex;
+  flex-direction: column;
+}
+.btn{
+  height: 34px;
+  background-color: rgb(0, 8, 0);
+  margin: 3px;
+  flex: 1;
+  color: rgb(8, 206, 206);
+}
+
+.btn.selected {
+  background-color: green;
+  color: azure;
+}
+
+.log-acceptable {
+  width: 28px;
+  background-color: rgb(35, 145, 35);
+  text-align: center;
+  
+}
+.log-unacceptable {
+  width: 28px;
+  background-color: rgb(145, 46, 46);
+  color: whitesmoke;
+  display: none;
+}  
+
+

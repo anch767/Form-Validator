@@ -17,7 +17,7 @@ function populateUI() {
   seats.forEach((seat, i) => (selectedSeats.indexOf(i) > -1) ? seat.classList.add('selected') : null) : null;
 }
 
-function updateCount(count1, count2){  // <---- what this function does is it saves all selected/de-selected elements everytime it is called. 
+function updateCount(count1, count2){  // <---- what this function does is, it saves all selected/de-selected elements everytime it is called. 
   const seatSelected =  document.querySelectorAll('.row .seat.selected');   
   const seatsSelectedCount = seatSelected.length; 
 

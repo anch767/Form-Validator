@@ -37,19 +37,21 @@ extract_btn.addEventListener('click', () => {
   const ssnMatch = text1Input.match(/SSN:\s(\d{3}-\d{2}-\d{4})/);
   const ssn = ssnMatch ? ssnMatch[1] : ''; // Check if SSN is present
   const lexIdMatch = text1Input.match(/LexID®?:\s(\d{4}-\d{4}-\d{4})/);
-  const lexId = lexIdMatch ? lexIdMatch[1] : ''; // Check if Lex ID is present
+  const lexId = lexIdMatch ? 'LexID: ' + lexIdMatch[1] : ''; // Check if Lex ID is present
 
   const formattedSsn = ssn.replace(/-/g, '')
   const formattedLexId = lexId.replace(/-/g, '.');
 
   const phoneNumbers = text1Input.match(/\d{3}-\d{3}-\d{4}/g);
-  const phoneNum = phoneNumbers.map(e => e.replace(/(\d{3})-(\d{3})-(\d{4})/g, '($1)$2-$3'));
+  const phoneNum = phoneNumbers ? phoneNumbers.map(e => e.replace(/(\d{3})-(\d{3})-(\d{4})/g, '($1)$2-$3')) : '';
   //allPhone = phoneNum
   //text2.value = text1.value;
   text2.value += name;
   // text2.value += ' SSN: ' +  formattedSsn; 
-  text2.value += ' Lex ID: ' + formattedLexId;
+  text2.value += ' ' + formattedLexId;
   text2.value += ' ' + phoneNum;
+
+
 
   let result = {};
 
@@ -80,7 +82,13 @@ extract_btn.addEventListener('click', () => {
 
   ssn_btn.addEventListener('click', () => navigator.clipboard.writeText(formattedSsn))
 
+  console.log(nameMatch[1]);
+  console.log(phoneNum);
+
   })
+
+
+
 
   copy_btn.addEventListener('click', () => {
     navigator.clipboard.writeText(text2.value)
