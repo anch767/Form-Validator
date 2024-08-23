@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: rgb(14, 14, 14);
+}
+
+span {  
+    background: url("https://cdn0.iconfinder.com/data/icons/ie_Financial_set/256/49.png");
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    pointer-events: none;  /* to create a trail part only on the mouse position but creating infinite trail */
+    background-size: cover;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: animate 6s linear;
+}
+
+/* to remove the trail after a few seconds and create an animation to bring the trail to top and also change it's color */
+@keyframes animate {
+    0% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+        /* change the color of the trail using hue rotate*/
+        filter: hue-rotate(0);
+    }
+
+    100% {
+        transform: translate(-50%, -5000%);
+        opacity: 0;     /* to make the trail invisible overtime*/
+        filter: hue-rotate(360deg);
+    }
+}
+
+
